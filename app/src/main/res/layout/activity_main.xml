@@ -1,18 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/root_view"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:orientation="vertical"
   tools:context=".MainActivity">
 
-  <TextView
-    android:layout_width="wrap_content"
+  <LinearLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Hello World!"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="Immersive"
+      android:textColor="@color/colorAccent"
+      android:textSize="20sp" />
+
+    <Button
+      android:id="@+id/immersive"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="测试沉浸式" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="InputPanel"
+      android:textColor="@color/colorAccent"
+      android:textSize="20sp" />
+
+    <Button
+      android:id="@+id/input_panel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="输入框" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="Dialog"
+      android:textColor="@color/colorAccent"
+      android:textSize="20sp" />
+
+    <Button
+      android:id="@+id/succession_two_simple_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="连续弹出两个弹窗" />
+
+    <Button
+      android:id="@+id/simple_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="单行标题 + 单行内容 + 单按钮" />
+
+    <Button
+      android:id="@+id/simple_dialog_content_multi_line"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="单行标题 + 多行内容 + 单按钮" />
+
+    <Button
+      android:id="@+id/simple_dialog_title_content_multi_line"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="多行标题 + 多行内容 + 单按钮" />
+
+    <Button
+      android:id="@+id/simple_dialog_two_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="单行标题 + 单行内容 + 双按钮" />
+
+    <Button
+      android:id="@+id/simple_dialog_only_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="单行标题 + 单按钮" />
+
+    <Button
+      android:id="@+id/simple_dialog_only_title_multi_line"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="多行标题 + 单按钮" />
+
+    <Button
+      android:id="@+id/title_content_detail_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="标题 + 内容 + 细节 + 双按钮" />
+
+    <Button
+      android:id="@+id/input_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="标题 + 内容 + 输入框 + 双按钮" />
+
+    <Button
+      android:id="@+id/small_icon_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="小图标 + 标题 + 内容 + 单按钮" />
+
+    <Button
+      android:id="@+id/net_small_icon_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="网络图标 + 标题 + 内容 + 双按钮" />
+
+    <Button
+      android:id="@+id/big_icon_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="大图标 + 标题 + 内容 + 单按钮" />
+
+    <Button
+      android:id="@+id/big_icon_dialog_two_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="大图标 + 标题 + 内容 + 双按钮" />
+
+    <Button
+      android:id="@+id/list_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="简单list对话框" />
+
+    <Button
+      android:id="@+id/list_dialog_multi_line"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="简单list对话框（内容可能多行），内容不可点" />
+
+    <Button
+      android:id="@+id/multi_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="list多选框" />
+
+    <Button
+      android:id="@+id/list_button_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="list多button对话框，没有图标，上下布局，无内容" />
+
+    <Button
+      android:id="@+id/list_button_content_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="list多button对话框，没有图标，上下布局，有内容" />
+
+    <Button
+      android:id="@+id/list_single_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="list单选对话框，无按钮" />
+
+    <Button
+      android:id="@+id/list_single_button_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="list单选对话框，有按钮，图标在右边" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="Toast"
+      android:textColor="@color/colorAccent"
+      android:textSize="20sp" />
+
+    <Button
+      android:id="@+id/info"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="一般toast" />
+
+    <Button
+      android:id="@+id/notify"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="成功toast" />
+
+    <Button
+      android:id="@+id/alert"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="失败toast" />
+
+    <Button
+      android:id="@+id/sub_thread"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="子线程发出的toast" />
+
+    <Button
+      android:id="@+id/next_activity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="下一个Activity立即展示的toast" />
+
+    <Button
+      android:id="@+id/next_activity_delay"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="下一个Activity延迟展示的toast" />
+
+    <Button
+      android:id="@+id/prev_activity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="前一个Activity立即展示的toast" />
+
+    <Button
+      android:id="@+id/prev_activity_delay"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="前一个Activity延迟展示的toast" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="Bubble"
+      android:textColor="@color/colorAccent"
+      android:textSize="20sp" />
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:background="@color/colorPrimary">
+
+      <View
+        android:id="@+id/anchor"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/colorAccent" />
+    </FrameLayout>
+
+    <Button
+      android:id="@+id/left"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Bubble在左边" />
+
+    <Button
+      android:id="@+id/top"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Bubble在上边" />
+
+    <Button
+      android:id="@+id/right"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Bubble在右边" />
+
+    <Button
+      android:id="@+id/bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Bubble在下边" />
+
+    <Button
+      android:id="@+id/top_right"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Bubble在上边偏右" />
+
+    <Button
+      android:id="@+id/top_left"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Bubble在上边偏左" />
+  </LinearLayout>
+</ScrollView>
