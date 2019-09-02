@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_enabled="false">
+    <shape>
+      <solid android:color="@color/input_send_background_color_pressed" />
+      <corners android:radius="@dimen/input_send_radius" />
+    </shape>
+  </item>
+  <item android:state_pressed="true">
+    <shape>
+      <solid android:color="@color/input_send_background_color_pressed" />
+      <corners android:radius="@dimen/input_send_radius" />
+    </shape>
+  </item>
+
+  <item>
+    <shape>
+      <solid android:color="@color/input_send_background_color" />
+      <corners android:radius="@dimen/input_send_radius" />
+    </shape>
+  </item>
+</selector>

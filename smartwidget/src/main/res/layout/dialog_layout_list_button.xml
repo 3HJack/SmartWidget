@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hhh.smartwidget.popup.PopupLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="@dimen/dialog_width"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center"
+  android:background="@drawable/dialog_background"
+  android:gravity="center_horizontal"
+  android:maxHeight="@dimen/dialog_max_height"
+  android:orientation="vertical"
+  android:paddingTop="@dimen/dialog_frame_padding"
+  app:delay_measure_id="@id/body">
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:lineSpacingMultiplier="@dimen/dialog_title_line_spacing_multiplier"
+    android:paddingLeft="@dimen/dialog_frame_padding"
+    android:paddingRight="@dimen/dialog_frame_padding"
+    android:paddingBottom="@dimen/dialog_title_padding_bottom"
+    android:textColor="@color/dialog_title_color"
+    android:textSize="@dimen/dialog_title_size"
+    android:textStyle="bold"
+    tools:text="title" />
+
+  <LinearLayout
+    android:id="@+id/body"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="10dp">
+
+      <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingMultiplier="@dimen/dialog_content_line_spacing_multiplier"
+        android:paddingLeft="@dimen/dialog_frame_padding"
+        android:paddingRight="@dimen/dialog_frame_padding"
+        android:paddingBottom="@dimen/dialog_title_padding_bottom"
+        android:textColor="@color/dialog_content_color"
+        android:textSize="@dimen/dialog_content_size"
+        tools:text="content" />
+    </ScrollView>
+
+    <android.support.v7.widget.RecyclerView
+      android:id="@+id/recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:overScrollMode="never" />
+  </LinearLayout>
+</com.hhh.smartwidget.popup.PopupLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tool="http://schemas.android.com/tools"
+  android:id="@+id/input_panel"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="bottom"
+  android:background="@color/input_panel_background"
+  android:clickable="true"
+  android:orientation="vertical">
+
+  <View
+    android:id="@+id/top_divider"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/input_divider_height"
+    android:background="@color/input_divider_color" />
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/operation_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+      android:id="@+id/send"
+      android:layout_width="wrap_content"
+      android:layout_height="33dp"
+      android:layout_marginRight="10dp"
+      android:background="@drawable/input_send_background"
+      android:gravity="center"
+      android:minWidth="60dp"
+      android:textColor="@color/input_send_text_color"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tool:text="send" />
+
+    <ImageView
+      android:id="@+id/emotion"
+      android:layout_width="30dp"
+      android:layout_height="50dp"
+      android:layout_marginRight="10dp"
+      android:scaleType="centerInside"
+      android:src="@drawable/input_emotion_icon"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toLeftOf="@+id/send"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+      android:id="@+id/at"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:scaleType="centerInside"
+      android:src="@drawable/input_at_icon"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+      android:id="@+id/input"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginBottom="10dp"
+      android:background="@null"
+      android:focusable="true"
+      android:gravity="left|center_vertical"
+      android:minHeight="30dp"
+      android:paddingTop="7dp"
+      android:paddingBottom="7dp"
+      android:scrollbarAlwaysDrawVerticalTrack="true"
+      android:scrollbarDefaultDelayBeforeFade="1000"
+      android:scrollbarFadeDuration="2000"
+      android:scrollbarSize="4dp"
+      android:scrollbarStyle="insideInset"
+      android:scrollbarThumbVertical="@drawable/input_scrollbar_background"
+      android:scrollbarTrackVertical="@android:color/transparent"
+      android:scrollbars="vertical"
+      android:textColor="@color/input_edit_text_color"
+      android:textColorHint="@color/input_edit_hint_color"
+      android:textCursorDrawable="@drawable/input_cursor_background"
+      android:textSize="15sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toRightOf="@+id/at"
+      app:layout_constraintRight_toLeftOf="@+id/emotion"
+      app:layout_constraintTop_toTopOf="parent"
+      tool:text="Say something ..." />
+  </android.support.constraint.ConstraintLayout>
+
+  <FrameLayout
+    android:id="@+id/emotion_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:minHeight="24dp"
+  android:orientation="horizontal"
+  android:paddingLeft="@dimen/dialog_frame_padding"
+  android:paddingRight="@dimen/dialog_frame_padding">
+
+  <TextView
+    android:id="@+id/index"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:textColor="@color/dialog_text_normal_color"
+    android:textSize="@dimen/dialog_item_text_size"
+    tools:text="1." />
+
+  <TextView
+    android:id="@+id/item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:lineSpacingMultiplier="@dimen/dialog_list_item_line_spacing_multiplier"
+    android:paddingLeft="5dp"
+    android:textColor="@color/dialog_text_normal_color"
+    android:textSize="@dimen/dialog_item_text_size"
+    tools:text="Item" />
+</LinearLayout>

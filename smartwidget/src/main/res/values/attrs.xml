@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="PopupLayout">
+    <attr name="delay_measure_id" format="reference" />
+    <attr name="android:maxHeight" />
+    <attr name="android:maxWidth" />
+  </declare-styleable>
+
+  <declare-styleable name="PopupRootLayout">
+    <attr name="maxChildWidth" format="dimension" />
+    <attr name="maxChildHeight" format="dimension" />
+  </declare-styleable>
+</resources>

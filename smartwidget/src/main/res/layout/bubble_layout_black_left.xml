@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:orientation="horizontal"
+  android:paddingLeft="@dimen/bubble_padding"
+  android:paddingTop="@dimen/bubble_padding"
+  android:paddingRight="@dimen/bubble_padding"
+  android:paddingBottom="@dimen/bubble_padding">
+
+  <TextView
+    android:id="@+id/text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bubble_black_background"
+    android:gravity="center"
+    android:paddingLeft="@dimen/bubble_text_padding_left_and_right"
+    android:paddingTop="@dimen/bubble_text_padding_top_and_bottom"
+    android:paddingRight="@dimen/bubble_text_padding_left_and_right"
+    android:paddingBottom="@dimen/bubble_text_padding_top_and_bottom"
+    android:textColor="@color/bubble_black_text_color"
+    android:textSize="@dimen/bubble_text_size"
+    tools:text="hint" />
+
+  <View
+    android:id="@+id/arrow"
+    android:layout_width="7.5dp"
+    android:layout_height="21dp"
+    android:background="@drawable/bubble_triangle_black_left" />
+</LinearLayout>

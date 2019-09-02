@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="dialog_title_size">17sp</dimen>
+  <dimen name="dialog_content_size">15sp</dimen>
+  <dimen name="dialog_button_size">17sp</dimen>
+
+  <dimen name="dialog_divider_size">1px</dimen>
+  <dimen name="dialog_corner_radius">10dp</dimen>
+  <dimen name="dialog_width">280dp</dimen>
+  <dimen name="dialog_max_height">335dp</dimen>
+  <dimen name="dialog_frame_padding">24dp</dimen>
+  <dimen name="dialog_detail_side_margin">16dp</dimen>
+  <dimen name="dialog_detail_top_margin">-9dp</dimen>
+  <dimen name="dialog_button_height">48dp</dimen>
+  <dimen name="dialog_button_side_padding">1dp</dimen>
+
+  <dimen name="dialog_title_padding_bottom">12dp</dimen>
+  <dimen name="dialog_title_multi_line_padding_bottom">9dp</dimen>
+  <dimen name="dialog_content_padding_bottom">22dp</dimen>
+
+  <dimen name="dialog_item_padding_left">15dp</dimen>
+  <dimen name="dialog_item_text_size">15sp</dimen>
+  <dimen name="dialog_list_item_min_height">48dp</dimen>
+
+  <dimen name="dialog_input_padding_left_and_right">8dp</dimen>
+  <dimen name="dialog_input_padding_top_and_bottom">7.5dp</dimen>
+
+  <dimen name="dialog_small_icon_size">90dp</dimen>
+  <dimen name="dialog_small_icon_margin_bottom">16dp</dimen>
+  <dimen name="dialog_big_icon_height">147dp</dimen>
+  <dimen name="dialog_big_icon_margin_bottom">24dp</dimen>
+
+  <item name="dialog_title_line_spacing_multiplier" format="float" type="dimen">1.3</item>
+  <item name="dialog_content_line_spacing_multiplier" format="float" type="dimen">1.2</item>
+  <item name="dialog_list_item_line_spacing_multiplier" format="float" type="dimen">1.2</item>
+
+  <dimen name="toast_corner_radius">8dp</dimen>
+  <dimen name="toast_text_size">16sp</dimen>
+  <dimen name="toast_icon_size">40dp</dimen>
+  <dimen name="toast_icon_margin_bottom">10dp</dimen>
+  <dimen name="toast_line_spacing_extra">2dp</dimen>
+  <dimen name="toast_padding_left_and_right">20dp</dimen>
+  <dimen name="toast_padding_top_and_bottom">16dp</dimen>
+
+  <dimen name="bubble_corner_radius">4dp</dimen>
+  <dimen name="bubble_text_padding_left_and_right">10dp</dimen>
+  <dimen name="bubble_text_padding_top_and_bottom">8dp</dimen>
+  <dimen name="bubble_padding">5dp</dimen>
+  <dimen name="bubble_text_size">14sp</dimen>
+
+  <dimen name="input_send_radius">20dp</dimen>
+  <dimen name="input_divider_height">1px</dimen>
+</resources>

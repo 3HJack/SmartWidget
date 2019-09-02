@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="dialog_background_color">#FFFFFF</color>
+
+  <color name="dialog_title_color">#303030</color>
+  <color name="dialog_content_color">#777777</color>
+  <color name="dialog_positive_color">#FF8000</color>
+  <color name="dialog_negative_color">#777777</color>
+
+  <color name="dialog_button_pressed">#F8F8F8</color>
+  <color name="dialog_button_normal">#FFFFFF</color>
+
+  <color name="dialog_input_text_color">#303030</color>
+  <color name="dialog_hint_text_color">#C6C6C6</color>
+  <color name="dialog_cursor_color">#FF8000</color>
+
+  <color name="dialog_text_selected_color">#FF8000</color>
+  <color name="dialog_text_normal_color">#777777</color>
+
+  <color name="dialog_divider_color">#EAEAEA</color>
+
+  <color name="toast_background_color">#B2111111</color>
+
+  <color name="bubble_white_background_color">#FFFFFF</color>
+  <color name="bubble_black_background_color">#B3111111</color>
+  <color name="bubble_white_text_color">#303030</color>
+  <color name="bubble_black_text_color">#FFFFFF</color>
+
+  <color name="input_panel_background">#FFFFFF</color>
+  <color name="input_divider_color">#EAEAEA</color>
+
+  <color name="input_send_background_color_pressed">#80FF8000</color>
+  <color name="input_send_background_color">#FF8000</color>
+  <color name="input_send_text_color_pressed">#80FFFFFF</color>
+  <color name="input_send_text_color_normal">#FFFFFF</color>
+
+  <color name="input_edit_text_color">#303030</color>
+  <color name="input_edit_hint_color">#C6C6C6</color>
+  <color name="input_cursor_color">#FF8000</color>
+</resources>

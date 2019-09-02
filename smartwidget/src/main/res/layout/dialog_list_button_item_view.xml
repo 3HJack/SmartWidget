@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/dialog_list_item_background"
+  android:gravity="center_horizontal"
+  android:minHeight="@dimen/dialog_list_item_min_height"
+  android:orientation="vertical">
+
+  <View
+    android:id="@+id/index"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dialog_divider_size"
+    android:background="@color/dialog_divider_color" />
+
+  <TextView
+    android:id="@+id/item"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:lineSpacingMultiplier="@dimen/dialog_list_item_line_spacing_multiplier"
+    android:textColor="@color/dialog_list_button_item_text_color"
+    android:textSize="17sp"
+    tools:text="Item" />
+</LinearLayout>
