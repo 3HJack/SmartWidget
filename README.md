@@ -43,4 +43,4 @@ implementation 'com.hhh.onepiece:smart-widget-x:0.0.1'
 
 ## 其他
 - 欢迎提Issue与作者交流
-- 欢迎提Pull request，帮助 fix bug，增加新的feature，让MVVM变得更强大、更好用
+- 欢迎提Pull request，帮助 fix bug，增加新的feature，让SmartWidget变得更强大、更好用
