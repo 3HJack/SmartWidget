@@ -24,6 +24,7 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hhh.smartwidget.R;
 import com.hhh.smartwidget.SmartWidget;
@@ -200,8 +201,7 @@ public class SmartToast {
   private void showView() {
     Context context = SmartWidget.getContext();
     if (!(context instanceof Activity)) {
-      android.widget.Toast toast =
-          android.widget.Toast.makeText(context, mBuilder.mText, android.widget.Toast.LENGTH_SHORT);
+      Toast toast = Toast.makeText(context, mBuilder.mText, Toast.LENGTH_SHORT);
       toast.setGravity(Gravity.CENTER, 0, 0);
       toast.show();
       onViewShown();
