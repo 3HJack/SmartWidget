@@ -30,11 +30,11 @@ allprojects {
 
 For Pre-AndroidX
 ```
-implementation 'com.hhh.onepiece:smart-widget:0.0.1'
+implementation 'com.hhh.onepiece:smart-widget:0.0.2'
 ```
 For AndroidX:
 ```
-implementation 'com.hhh.onepiece:smart-widget-x:0.0.1'
+implementation 'com.hhh.onepiece:smart-widget-x:0.0.2'
 ```
 
 ## 实现原理
