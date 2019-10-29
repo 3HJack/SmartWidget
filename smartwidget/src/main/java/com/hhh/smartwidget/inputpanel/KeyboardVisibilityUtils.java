@@ -39,7 +39,7 @@ public final class KeyboardVisibilityUtils {
             if (viewVisibleHeight == visibleHeight) {
               return;
             }
-            int minHeightDiff = view.getHeight() / 3;
+            int minHeightDiff = view.getHeight() / 4;
             // 根视图显示高度变小超过 minHeightDiff，可以看作软键盘显示了
             if (viewVisibleHeight - visibleHeight > minHeightDiff) {
               listener.onKeyboardShow(viewVisibleHeight - visibleHeight);

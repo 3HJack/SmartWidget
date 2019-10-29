@@ -1,5 +1,8 @@
 package com.hhh.smartwidget.popup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
@@ -13,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 
@@ -27,6 +31,8 @@ import androidx.annotation.Px;
 import androidx.annotation.UiThread;
 
 public class Popup {
+
+  private static final List<View> FOCUSABLE_VIEW_LIST = new ArrayList<>();
 
   protected final Builder mBuilder;
   protected final Runnable mAutoDismiss;
@@ -59,6 +65,19 @@ public class Popup {
 
   public static boolean isPermanentPopup(@NonNull Popup popup) {
     return !popup.mBuilder.mCanceledOnTouchOutside && popup.mBuilder.mPenetrateOutsideTouchEvent;
+  }
+
+  /**
+   * 焦点的自动分发有时失效，可以调用此方法，相应的记得调用 {@link #removeFocusableView} 方法
+   */
+  public static void addFocusableView(@NonNull View view) {
+    if (!FOCUSABLE_VIEW_LIST.contains(view)) {
+      FOCUSABLE_VIEW_LIST.add(view);
+    }
+  }
+
+  public static void removeFocusableView(@NonNull View view) {
+    FOCUSABLE_VIEW_LIST.remove(view);
   }
 
   @NonNull
@@ -99,7 +118,7 @@ public class Popup {
 
   /**
    * 展示弹窗，不一定马上展示，可能排队.
-   * 
+   *
    * @param <T>
    */
   @UiThread
@@ -126,7 +145,7 @@ public class Popup {
   /**
    * 关闭弹窗.
    * 和 show 的语义对称，show 展示或者入队，dismiss 消失或者从队列移除.
-   * 
+   *
    * @param dismissType
    */
   @UiThread
@@ -160,6 +179,17 @@ public class Popup {
       mBuilder.mCancelable = true;
     }
     mBuilder.mCanceledOnTouchOutside = cancelable;
+  }
+
+  /**
+   * 如果有弹窗外的view抢占了焦点，需调用此方法，否则无法拦截back事件
+   */
+  public void interceptBackEvent(@NonNull View view) {
+    if (view instanceof ViewGroup) {
+      setKeyListener((ViewGroup) view);
+    } else {
+      view.setOnKeyListener(mOnKeyListener);
+    }
   }
 
   protected void onShowPopup(@Nullable Bundle bundle) {}
@@ -204,16 +234,22 @@ public class Popup {
       mRootLayout.addView(mPopupView);
     }
 
-    WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-    layoutParams.copyFrom(mBuilder.mActivity.getWindow().getAttributes());
-    layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
-    layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
-    layoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION;
-    layoutParams.flags |= WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
-    layoutParams.format = PixelFormat.TRANSLUCENT;
-    layoutParams.gravity = Gravity.CENTER;
-    mBuilder.mActivity.getWindowManager().addView(mRootLayout, layoutParams);
+    if (!mBuilder.mIsAddToWindow) {
+      ((ViewGroup) mBuilder.mActivity.getWindow().getDecorView()).addView(mRootLayout,
+          ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+    } else {
+      WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+      layoutParams.copyFrom(mBuilder.mActivity.getWindow().getAttributes());
+      layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
+      layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
+      layoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION;
+      layoutParams.flags |= WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
+      layoutParams.format = PixelFormat.TRANSLUCENT;
+      layoutParams.gravity = Gravity.CENTER;
+      mBuilder.mActivity.getWindowManager().addView(mRootLayout, layoutParams);
+    }
 
+    FOCUSABLE_VIEW_LIST.add(mRootLayout);
     getPopupManager().onPopupShow(mBuilder.mActivity, this);
     onShowPopup(mBuilder.mBundle);
     if (mBuilder.mOnVisibilityListener != null) {
@@ -314,10 +350,22 @@ public class Popup {
     }
     onDismissPopup(mBuilder.mBundle);
     mBuilder.mOnViewStateCallback.onDestroyView(this);
-    try {
-      mBuilder.mActivity.getWindowManager().removeViewImmediate(mRootLayout);
-    } catch (Exception e) {
-      e.printStackTrace();
+    if (!mBuilder.mIsAddToWindow) {
+      ViewParent parent = mRootLayout.getParent();
+      if (parent instanceof ViewGroup) {
+        ((ViewGroup) parent).removeView(mRootLayout);
+      }
+    } else {
+      try {
+        mBuilder.mActivity.getWindowManager().removeViewImmediate(mRootLayout);
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    }
+
+    FOCUSABLE_VIEW_LIST.remove(mRootLayout);
+    if (!FOCUSABLE_VIEW_LIST.isEmpty()) {
+      FOCUSABLE_VIEW_LIST.get(FOCUSABLE_VIEW_LIST.size() - 1).requestFocus();
     }
   }
 
@@ -335,6 +383,7 @@ public class Popup {
     protected boolean mCancelable = true;
     protected boolean mCanceledOnTouchOutside = true;
     protected boolean mPenetrateOutsideTouchEvent;
+    protected boolean mIsAddToWindow;
     protected long mShowDuration = -1L;
 
     protected int mMaxHeight = Integer.MAX_VALUE;
@@ -357,7 +406,9 @@ public class Popup {
     public Builder(@NonNull Activity activity) {
       mActivity = activity;
       mTopPadding = WidgetUtils.getStatusBarHeight(activity);
-      mBottomPadding = WidgetUtils.getNavigationBarHeight(activity);
+      if (!WidgetUtils.isLandscape()) {
+        mBottomPadding = WidgetUtils.getNavigationBarHeight(activity);
+      }
     }
 
     public Popup build() {
@@ -417,6 +468,16 @@ public class Popup {
      */
     public <T extends Builder> T setPenetrateOutsideTouchEvent(boolean penetrateOutsideTouchEvent) {
       mPenetrateOutsideTouchEvent = penetrateOutsideTouchEvent;
+      return (T) this;
+    }
+
+    /**
+     * 默认值：false
+     * true：将View添加给Window
+     * false：默认处理，将View添加给decorView
+     */
+    public <T extends Builder> T setAddToWindow(boolean isAddToWindow) {
+      mIsAddToWindow = isAddToWindow;
       return (T) this;
     }
 

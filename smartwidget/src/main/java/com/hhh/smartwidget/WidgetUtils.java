@@ -238,7 +238,15 @@ public final class WidgetUtils {
       View childView = decorView.getChildAt(i);
       if (childView.getId() == android.R.id.navigationBarBackground) {
         navigationBarInfo.mIsExist = true;
-        navigationBarInfo.mHeight = childView.getHeight();
+        /**
+         * 横屏状态下虚拟导航栏的位置和竖屏是一样的，默认开发者依然想拿的是竖屏状态下导航栏的高度，
+         * 所以横屏状态下返回的是导航栏的宽度值
+         */
+        if (isLandscape()) {
+          navigationBarInfo.mHeight = childView.getWidth();
+        } else {
+          navigationBarInfo.mHeight = childView.getHeight();
+        }
         break;
       }
     }

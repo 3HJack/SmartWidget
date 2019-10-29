@@ -49,7 +49,7 @@ publish {
     userOrg = 'onepiece'
     groupId = 'com.hhh.onepiece'
     artifactId = 'smart-widget-x'
-    publishVersion = '0.0.1'
+    publishVersion = '0.0.2'
     desc = '可完全自定义，扩展性超强的一套Android Widget组件'
     website = 'https://github.com/3HJack/SmartWidget'
 }
