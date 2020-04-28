@@ -7,11 +7,11 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.LinearLayout;
 
-import com.hhh.smartwidget.R;
-import com.hhh.smartwidget.popup.PopupInterface;
-
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
+
+import com.hhh.smartwidget.R;
+import com.hhh.smartwidget.popup.PopupInterface;
 
 public class BubbleFactory {
   private BubbleFactory() {}

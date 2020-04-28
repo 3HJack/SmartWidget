@@ -6,14 +6,14 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+
 import com.hhh.smartwidget.R;
 import com.hhh.smartwidget.SmartWidget;
 import com.hhh.smartwidget.WidgetUtils;
 import com.hhh.smartwidget.popup.PopupInterface;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 
 public class ToastFactory {
 

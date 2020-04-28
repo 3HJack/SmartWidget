@@ -8,11 +8,6 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
-import com.hhh.smartwidget.R;
-import com.hhh.smartwidget.WidgetUtils;
-import com.hhh.smartwidget.popup.Popup;
-import com.hhh.smartwidget.popup.PopupInterface;
-
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +15,11 @@ import androidx.annotation.Px;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.hhh.smartwidget.R;
+import com.hhh.smartwidget.WidgetUtils;
+import com.hhh.smartwidget.popup.Popup;
+import com.hhh.smartwidget.popup.PopupInterface;
 
 public class Bubble extends Popup {
 

@@ -8,11 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.hhh.smartwidget.R;
-import com.hhh.smartwidget.dialog.SmartDialog;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.hhh.smartwidget.R;
+import com.hhh.smartwidget.dialog.SmartDialog;
 
 public class ListMultiAdapter extends RecyclerView.Adapter<DialogViewHolder> {
 

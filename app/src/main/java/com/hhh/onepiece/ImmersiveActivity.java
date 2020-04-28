@@ -2,9 +2,9 @@ package com.hhh.onepiece;
 
 import android.os.Bundle;
 
-import com.hhh.smartwidget.immersive.Immersive;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.hhh.smartwidget.immersive.Immersive;
 
 public class ImmersiveActivity extends AppCompatActivity implements Immersive {
 

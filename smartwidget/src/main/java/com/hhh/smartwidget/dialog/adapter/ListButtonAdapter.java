@@ -5,12 +5,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.hhh.smartwidget.R;
 import com.hhh.smartwidget.dialog.SmartDialog;
 import com.hhh.smartwidget.popup.PopupInterface;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class ListButtonAdapter extends RecyclerView.Adapter<DialogViewHolder> {
 

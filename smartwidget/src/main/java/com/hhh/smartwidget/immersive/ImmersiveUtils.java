@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.hhh.smartwidget.WidgetUtils;
-
 import androidx.annotation.NonNull;
+
+import com.hhh.smartwidget.WidgetUtils;
 
 public final class ImmersiveUtils {
 

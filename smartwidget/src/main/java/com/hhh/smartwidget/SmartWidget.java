@@ -7,13 +7,13 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.hhh.smartwidget.immersive.ImmersiveUtils;
 import com.hhh.smartwidget.popup.DefaultPopupManager;
 import com.hhh.smartwidget.popup.PopupInterface;
 import com.hhh.smartwidget.toast.SmartToast;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public final class SmartWidget {
 

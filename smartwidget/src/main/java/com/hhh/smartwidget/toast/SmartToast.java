@@ -26,17 +26,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hhh.smartwidget.R;
-import com.hhh.smartwidget.SmartWidget;
-import com.hhh.smartwidget.WidgetUtils;
-import com.hhh.smartwidget.popup.PopupInterface;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.IntRange;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+
+import com.hhh.smartwidget.R;
+import com.hhh.smartwidget.SmartWidget;
+import com.hhh.smartwidget.WidgetUtils;
+import com.hhh.smartwidget.popup.PopupInterface;
 
 public class SmartToast {
 

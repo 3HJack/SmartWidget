@@ -6,6 +6,8 @@ import android.animation.ObjectAnimator;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
+import androidx.annotation.NonNull;
+
 import com.hhh.smartwidget.R;
 import com.hhh.smartwidget.dialog.adapter.ListButtonAdapter;
 import com.hhh.smartwidget.dialog.adapter.ListMultiAdapter;
@@ -15,8 +17,6 @@ import com.hhh.smartwidget.dialog.adapter.ListSingleButtonAdapter;
 import com.hhh.smartwidget.dialog.adjust.AdjustGeneralStyle;
 import com.hhh.smartwidget.dialog.adjust.AdjustTitleLayout;
 import com.hhh.smartwidget.popup.PopupInterface;
-
-import androidx.annotation.NonNull;
 
 public class DialogBuilderFactory {
 

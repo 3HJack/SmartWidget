@@ -8,11 +8,11 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.hhh.smartwidget.R;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.Px;
+
+import com.hhh.smartwidget.R;
 
 public class PopupRootLayout extends FrameLayout {
 

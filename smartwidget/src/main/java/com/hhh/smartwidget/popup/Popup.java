@@ -20,15 +20,15 @@ import android.view.ViewParent;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 
-import com.hhh.smartwidget.SmartWidget;
-import com.hhh.smartwidget.WidgetUtils;
-
 import androidx.annotation.IdRes;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.Px;
 import androidx.annotation.UiThread;
+
+import com.hhh.smartwidget.SmartWidget;
+import com.hhh.smartwidget.WidgetUtils;
 
 public class Popup {
 

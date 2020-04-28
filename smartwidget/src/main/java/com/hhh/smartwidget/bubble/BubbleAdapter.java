@@ -6,10 +6,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hhh.smartwidget.R;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.hhh.smartwidget.R;
 
 public class BubbleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

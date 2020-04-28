@@ -11,6 +11,10 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
+
 import com.hhh.smartwidget.WidgetUtils;
 import com.hhh.smartwidget.bubble.Bubble;
 import com.hhh.smartwidget.bubble.BubbleFactory;
@@ -20,10 +24,6 @@ import com.hhh.smartwidget.inputpanel.InputPanel;
 import com.hhh.smartwidget.popup.Popup;
 import com.hhh.smartwidget.popup.PopupInterface;
 import com.hhh.smartwidget.toast.ToastFactory;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
 
 public class MainActivity extends AppCompatActivity {
 

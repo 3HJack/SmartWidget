@@ -21,13 +21,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hhh.smartwidget.R;
-import com.hhh.smartwidget.WidgetUtils;
-import com.hhh.smartwidget.dialog.adjust.AdjustStyle;
-import com.hhh.smartwidget.inputpanel.KeyboardVisibilityUtils;
-import com.hhh.smartwidget.popup.Popup;
-import com.hhh.smartwidget.popup.PopupInterface;
-
 import androidx.annotation.ArrayRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.IntRange;
@@ -37,6 +30,13 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.hhh.smartwidget.R;
+import com.hhh.smartwidget.WidgetUtils;
+import com.hhh.smartwidget.dialog.adjust.AdjustStyle;
+import com.hhh.smartwidget.inputpanel.KeyboardVisibilityUtils;
+import com.hhh.smartwidget.popup.Popup;
+import com.hhh.smartwidget.popup.PopupInterface;
 
 public class SmartDialog extends Popup implements View.OnClickListener {
 

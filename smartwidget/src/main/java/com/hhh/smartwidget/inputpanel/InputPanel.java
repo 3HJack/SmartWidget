@@ -24,11 +24,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hhh.smartwidget.R;
-import com.hhh.smartwidget.WidgetUtils;
-import com.hhh.smartwidget.popup.Popup;
-import com.hhh.smartwidget.popup.PopupInterface;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.IntRange;
 import androidx.annotation.LayoutRes;
@@ -40,6 +35,11 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.OnLifecycleEvent;
+
+import com.hhh.smartwidget.R;
+import com.hhh.smartwidget.WidgetUtils;
+import com.hhh.smartwidget.popup.Popup;
+import com.hhh.smartwidget.popup.PopupInterface;
 
 public class InputPanel extends Popup implements LifecycleObserver {
 

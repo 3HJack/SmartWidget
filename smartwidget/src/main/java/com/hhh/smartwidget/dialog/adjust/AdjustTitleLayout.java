@@ -4,11 +4,11 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.hhh.smartwidget.R;
 import com.hhh.smartwidget.WidgetUtils;
 import com.hhh.smartwidget.dialog.SmartDialog;
-
-import androidx.annotation.NonNull;
 
 public class AdjustTitleLayout implements AdjustStyle {
 

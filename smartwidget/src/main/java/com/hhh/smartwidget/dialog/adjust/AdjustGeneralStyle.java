@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.hhh.smartwidget.R;
 import com.hhh.smartwidget.dialog.SmartDialog;
-
-import androidx.annotation.NonNull;
 
 public class AdjustGeneralStyle implements AdjustStyle {
   @Override
